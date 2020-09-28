@@ -20,12 +20,20 @@ class App < Sinatra::Base
 
   get '/set' do
     # set the :foo key of the session hash equal to 'hello' here!
-    if session[:foo] == 'hello'
+    if session[:foo] == params['hello']
       redirect '/fetch'
     else
       "Session value has not been set!"
     end
   end
+
+# get '/' do
+#   "value = " << session[:value].inspect
+# end
+# 
+# get '/:value' do
+#   session['value'] = params['value']
+# end
 
   get '/fetch' do
     "You did it! session[:foo] value: #{session[:foo]}.\nMove on to Part II of this lab at '/second_exercise' "
