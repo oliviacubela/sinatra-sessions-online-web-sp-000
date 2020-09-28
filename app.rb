@@ -28,14 +28,6 @@ class App < Sinatra::Base
     end
   end
 
-# get '/' do
-#   "value = " << session[:value].inspect
-# end
-#
-# get '/:value' do
-#   session['value'] = params['value']
-# end
-
   get '/fetch' do
     "You did it! session[:foo] value: #{session[:foo]}.\nMove on to Part II of this lab at '/second_exercise' "
   end
