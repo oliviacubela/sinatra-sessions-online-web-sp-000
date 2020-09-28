@@ -30,7 +30,7 @@ class App < Sinatra::Base
 # get '/' do
 #   "value = " << session[:value].inspect
 # end
-# 
+#
 # get '/:value' do
 #   session['value'] = params['value']
 # end
